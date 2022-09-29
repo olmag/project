@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'Montserrat';
   src: url("../abstractions/montserrat/montserrathairline.woff2") format("woff2");
@@ -352,6 +353,11 @@ body, h1, h2, h3, h4, p {
 
 .page__info__description {
   padding: 0 30px 30px;
+  display: none;
+}
+
+.page__info__description.active{
+  display: flex;
 }
 
 .description__title {
@@ -1291,9 +1297,6 @@ body, h1, h2, h3, h4, p {
     margin-bottom: 305px;
   }
   .page__info__description {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
