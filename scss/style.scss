@@ -276,6 +276,8 @@ body, h1, h2, h3, h4, p {
     @include fontBold(30px, 37px);
     color: $_greyText;
     padding: 0;
+    border: none;
+    background-color: inherit;
   }
 
   &__item:hover:not(.advantage__item--active) {
@@ -297,7 +299,13 @@ body, h1, h2, h3, h4, p {
 }
 
 .page__info__description {
+  display: none;
   padding: 0 30px 30px;
+
+  &.active {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .description__title {
@@ -1097,7 +1105,6 @@ body, h1, h2, h3, h4, p {
     }
 
     &__info__description {
-      display: flex;
       flex-direction: column;
       flex-wrap: wrap;
       justify-content: center;
