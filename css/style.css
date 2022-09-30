@@ -331,6 +331,8 @@ body, h1, h2, h3, h4, p {
   font-family: 'Montserrat Bold';
   color: #B3B3BA;
   padding: 0;
+  border: none;
+  background-color: inherit;
 }
 
 .advantage__item:hover:not(.advantage__item--active) {
@@ -351,7 +353,18 @@ body, h1, h2, h3, h4, p {
 }
 
 .page__info__description {
+  display: none;
   padding: 0 30px 30px;
+}
+
+.page__info__description.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .description__title {
@@ -1291,9 +1304,6 @@ body, h1, h2, h3, h4, p {
     margin-bottom: 305px;
   }
   .page__info__description {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
