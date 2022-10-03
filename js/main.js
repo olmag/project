@@ -15,19 +15,16 @@ function onPillsListClick(event) {
 
     const targetItem = document.getElementById(targetPill.dataset.id);
 
-    hidde(currentItem);
-    hidde(currntPill);
+    toggleClass(currentItem);
+    toggleClass(currntPill);
 
     currntPill = targetPill;
     currentItem = targetItem;
     
-    show(targetItem);
-    show(targetPill);
+    toggleClass(targetItem);
+    toggleClass(targetPill);
 }
 
-function show(element) {
-    element.classList.add('active');
-}
-function hidde(element) {
-    element.classList.remove('active')
+function toggleClass(element) {
+    element.classList.toggle('active');
 }
